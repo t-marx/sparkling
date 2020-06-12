@@ -169,7 +169,8 @@ wines_class$quality <- as.factor(wines_class$quality)
 
 wines_class %>%
   group_by(Quality = quality) %>%
-  summarise(Population = n())
+  summarise(Population = n()) %>%
+  pander(.)
 
 # We construct the train and test sets
 
